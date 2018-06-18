@@ -3,12 +3,12 @@ import base64
 
 def copy(cp_str,extens):
     cp_enc = cp_str
-    write = open("copy."+extens,"wb")
+    write = open("copy."+extens.decode(),"wb")
     cp_f = base64.b64decode(cp_enc)
     write.write(cp_f)
-    write.close()
+    #write.close()
 
-host = "10.10.6.42"#"192.168.0.254"
+host = "127.0.0.1"
 port = 1270
 
 serversock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)

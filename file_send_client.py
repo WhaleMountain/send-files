@@ -7,7 +7,7 @@ import base64
 def conver(name,extens):
     f = open(name+'.'+extens, 'rb').read()
     f_conver=base64.b64encode(f)
-    f.close()
+    #f.close()
     return f_conver
 
 #文字列を指定の数ずつに区切る
@@ -17,7 +17,7 @@ def split_str(s, n):
     length = len(s)
     return [s[i:i+n] for i in range(0, length, n)]
 
-host = "192.168.0.254"
+host = "127.0.0.1"
 port = 1270
 
 client = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
